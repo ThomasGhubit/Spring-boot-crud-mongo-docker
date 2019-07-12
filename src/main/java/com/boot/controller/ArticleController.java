@@ -18,7 +18,7 @@ import com.boot.model.Article;
 import com.boot.repository.ArticleRepository;
 
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("/")
 @CrossOrigin("*")
 public class ArticleController {
 	@Autowired
