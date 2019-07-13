@@ -11,10 +11,10 @@ body {
 .pad-top {
   padding-top: 60px;
 }
-.articletable tr td:nth-child(2) {
+.tasktable tr td:nth-child(2) {
   width: 150px;
 }
-.articletable tr:nth-child(1) td {
+.tasktable tr:nth-child(1) td {
   border-top: none;
 }
 /* Have to set height explicity on ui-view

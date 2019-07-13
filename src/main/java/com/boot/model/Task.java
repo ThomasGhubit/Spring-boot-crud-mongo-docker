@@ -6,17 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Article {
+public class Task {
 	@Id
 	String id;
-	String name;
+	String taskName;
 	String author;
 
-	public Article() { }
+	public Task() { }
 
-	public Article(String id, String name, String author) {
+	public Task(String id, String name, String author) {
 		this.id = id;
-		this.name = name;
+		this.taskName = name;
 		this.author = author;
 	}
 
@@ -29,11 +29,11 @@ public class Article {
 	}
 
 	public String getName() {
-		return name;
+		return taskName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.taskName = name;
 	}
 
 	public String getAuthor() {

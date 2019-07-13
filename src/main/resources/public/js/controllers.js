@@ -1,34 +1,34 @@
-angular.module('app.controllers', []).controller('ArticleListController', function($scope, $state, popupService, $window, Article) {
-  $scope.articles = Article.query(); //fetch all articles. Issues a GET to /articles
+angular.module('app.controllers', []).controller('TaskListController', function($scope, $state, popupService, $window, Task) {
+  $scope.tasks = Task.query(); //fetch all tasks. Issues a GET to /tasks
 
-  $scope.deleteArticle = function(article) { // Delete a Article. Issues a DELETE to /articles/:id
-    if (popupService.showPopup('Really delete this?')) {
-      article.$delete(function() {
-        $scope.articles = Article.query(); 
-        $state.go('articles');
+  $scope.deleteTask = function(task) { // Delete a Task. Issues a DELETE to /tasks/:id
+    if (popupService.showPopup('Already complete this?')) {
+      task.$delete(function() {
+        $scope.tasks = Task.query(); 
+        $state.go('tasks');
       });
     }
   };
-}).controller('ArticleViewController', function($scope, $stateParams, Article) {
-  $scope.article = Article.get({ id: $stateParams.id }); //Get a single article.Issues a GET to /articles/:id
-}).controller('ArticleCreateController', function($scope, $state, $stateParams, Article) {
-  $scope.article = new Article();  //create new article instance. Properties will be set via ng-model on UI
+}).controller('TaskViewController', function($scope, $stateParams, Task) {
+  $scope.task = Task.get({ id: $stateParams.id }); //Get a single task.Issues a GET to /tasks/:id
+}).controller('TaskCreateController', function($scope, $state, $stateParams, Task) {
+  $scope.task = new Task();  //create new task instance. Properties will be set via ng-model on UI
 
-  $scope.addArticle = function() { //create a new article. Issues a POST to /articles
-    $scope.article.$save(function() {
-      $state.go('articles'); // on success go back to the list i.e. articles state.
+  $scope.addTask = function() { //create a new task. Issues a POST to /tasks
+    $scope.task.$save(function() {
+      $state.go('tasks'); // on success go back to the list i.e. tasks state.
     });
   };
-}).controller('ArticleEditController', function($scope, $state, $stateParams, Article) {
-  $scope.updateArticle = function() { //Update the edited article. Issues a PUT to /articles/:id
-    $scope.article.$update(function() {
-      $state.go('articles'); // on success go back to the list i.e. articles state.
+}).controller('TaskEditController', function($scope, $state, $stateParams, Task) {
+  $scope.updateTask = function() { //Update the edited task. Issues a PUT to /tasks/:id
+    $scope.task.$update(function() {
+      $state.go('tasks'); // on success go back to the list i.e. tasks state.
     });
   };
 
-  $scope.loadArticle = function() { //Issues a GET request to /articles/:id to get a article to update
-    $scope.article = Article.get({ id: $stateParams.id });
+  $scope.loadTask = function() { //Issues a GET request to /tasks/:id to get a task to update
+    $scope.task = Task.get({ id: $stateParams.id });
   };
 
-  $scope.loadArticle(); // Load a article which can be edited on UI
+  $scope.loadTask(); // Load a task which can be edited on UI
 });

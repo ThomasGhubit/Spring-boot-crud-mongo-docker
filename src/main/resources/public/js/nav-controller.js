@@ -1,6 +1,6 @@
 angular.module('navController', [])
 	.controller('nav', function($scope, $state) {
-		$scope.title = 'Blog';
+		$scope.title = 'Task Manager';
 
 		// returns true if the current router url matches the passed in url
 		// so views can set 'active' on links easily
@@ -15,8 +15,8 @@ angular.module('navController', [])
 				url: '#/'
 			},
 			{
-				name: 'Articles',
-				url: '#/articles'
+				name: 'Tasks',
+				url: '#/tasks'
 			}
 		]
 	});

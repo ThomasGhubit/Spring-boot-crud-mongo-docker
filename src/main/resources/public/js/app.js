@@ -45,22 +45,22 @@
 					pageTitle: 'Home'
 				}
 			})
-			.state('articles',{
-	        url:'/articles',
-	        templateUrl: viewsPrefix + 'articles.html',
-	        controller:'ArticleListController'
-	    }).state('viewArticle',{
-	       url:'/articles/:id/view',
-	       templateUrl: viewsPrefix + 'article-view.html',
-	       controller:'ArticleViewController'
-	    }).state('newArticle',{
-	        url:'/articles/new',
-	        templateUrl: viewsPrefix + 'article-add.html',
-	        controller:'ArticleCreateController'
-	    }).state('editArticle',{
-	        url:'/articles/:id/edit',
-	        templateUrl: viewsPrefix + 'article-edit.html',
-	        controller:'ArticleEditController'
+			.state('tasks',{
+	        url:'/tasks',
+	        templateUrl: viewsPrefix + 'tasks.html',
+	        controller:'TaskListController'
+	    }).state('viewTask',{
+	       url:'/tasks/:id/view',
+	       templateUrl: viewsPrefix + 'task-view.html',
+	       controller:'TaskViewController'
+	    }).state('newTask',{
+	        url:'/tasks/new',
+	        templateUrl: viewsPrefix + 'task-add.html',
+	        controller:'TaskCreateController'
+	    }).state('editTask',{
+	        url:'/tasks/:id/edit',
+	        templateUrl: viewsPrefix + 'task-edit.html',
+	        controller:'TaskEditController'
 	    })
 	})
 	.directive('updateTitle', ['$rootScope', '$timeout',
