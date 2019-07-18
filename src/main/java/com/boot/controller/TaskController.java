@@ -18,7 +18,7 @@ import com.boot.model.Task;
 import com.boot.repository.TaskRepository;
 
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("")
 @CrossOrigin("*")
 public class TaskController {
 	@Autowired

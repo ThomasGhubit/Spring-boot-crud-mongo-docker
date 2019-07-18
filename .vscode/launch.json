@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - SpringApp",
             "request": "launch",
             "mainClass": "com.boot.SpringApp",
+            "projectName": "springapp"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SpringApp",
+            "request": "launch",
+            "mainClass": "com.boot.SpringApp",
             "projectName": "springmongorest"
         }
     ]

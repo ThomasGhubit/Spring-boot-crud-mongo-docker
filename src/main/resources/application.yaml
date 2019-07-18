@@ -1,0 +1,12 @@
+spring.data.mongodb:
+  database: tasks # Database name.
+  host: db
+#   uri: mongodb://localhost:27017 # Mongo database URI. Cannot be set with host, port and credentials.
+
+server:
+  port: 8080
+
+# spring.data.mongodb.host=localhost
+# spring.data.mongodb.uri=mongodb://localhost:27017/tasks
+# spring.data.mongodb.database=tasks
+spring.main.allow-bean-definition-overriding: true

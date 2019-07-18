@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spring-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-app-label
+    spec:
+      containers:
+      - name: spring-container
+        image: yangdu5/repository711
+        ports:
+        - name: spring-port
+          containerPort: 8080
+        env:
+          - name: MONGO_INITDB_HOST
+            value: mongo-service
+          - name: MONGO_INITDB_DATABASE
+            value: TodoApp
