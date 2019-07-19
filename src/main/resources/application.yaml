@@ -1,7 +1,8 @@
 spring.data.mongodb:
-  database: tasks # Database name.
-  host: db
-#   uri: mongodb://localhost:27017 # Mongo database URI. Cannot be set with host, port and credentials.
+  # database: tasks # Database name.
+  # host: db
+  uri: mongodb://Yang:Thomas129@yang-shard-00-00-of3el.mongodb.net:27017,yang-shard-00-01-of3el.mongodb.net:27017,yang-shard-00-02-of3el.mongodb.net:27017/test?ssl=true&replicaSet=Yang-shard-0&authSource=admin&retryWrites=true&w=majority
+  # uri: mongodb+srv://Yang:Thomas129@yang-of3el.mongodb.net/test?retryWrites=true&w=majority
 
 server:
   port: 8080

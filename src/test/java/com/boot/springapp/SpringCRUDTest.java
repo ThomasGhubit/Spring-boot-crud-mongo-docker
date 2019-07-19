@@ -40,7 +40,5 @@ public class SpringCRUDTest {
 
 	    // assertThat( responseJson.isMissingNode() , is(false) );
 	    // assertThat( responseJson.toString() , equalTo("[]") );
-		
 	}
-
 }
